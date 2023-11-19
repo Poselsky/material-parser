@@ -1,4 +1,4 @@
-# Changelog for `mtl-parser`
+# Changelog for `material-parser`
 
 All notable changes to this project will be documented in this file.
 

@@ -1,10 +1,9 @@
-name:                mtl-parser
+name:                material-parser
 version:             0.1.0.0
-github:              "githubuser/mtl-parser"
-license:             BSD-3-Clause
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2023 Author name here"
+github:              "poselsky/material-parser"
+license:             Mit
+author:              "Oleg Musijenko"
+copyright:           "2023 Oleg Musijenko"
 
 extra-source-files:
 - README.md
@@ -17,7 +16,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/mtl-parser#readme>
+description:         Please see the README on GitHub at <https://github.com/poselsky/material-parser#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -40,7 +39,7 @@ library:
   source-dirs: src
 
 tests:
-  mtl-parser-test:
+  material-parser-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -48,4 +47,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mtl-parser
+    - material-parser
