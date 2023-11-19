@@ -25,10 +25,10 @@ source-repository head
 
 library
   exposed-modules:
-      Material
-      Private.Material
+      Wavefront.Material
+      Wavefront.Private.Material
   other-modules:
-      Paths_material_parser
+      Paths_wavefront_material
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -43,14 +43,14 @@ test-suite wavefront-material-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_material_parser
+      Paths_wavefront_material
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , linear
-    , wavefront-material
     , parsec
     , text
+    , wavefront-material
   default-language: Haskell2010

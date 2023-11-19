@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-import Private.Material
+import Wavefront.Private.Material
 import Text.Parsec
 
 main :: IO ()

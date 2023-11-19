@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Private.Material where
+module Wavefront.Private.Material where
 
 import qualified Linear
 import qualified Data.Text as Text

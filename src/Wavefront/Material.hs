@@ -1,4 +1,4 @@
-module Material (
+module Wavefront.Material (
     Material 
   , FilterColorMode
   , IlluminationMode
@@ -8,4 +8,4 @@ module Material (
   , parseMtl
 ) where
 
-import Private.Material
+import Wavefront.Private.Material
