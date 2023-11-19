@@ -1,4 +1,4 @@
-cabal-version: 2.2
+cabal-version: 1.12
 
 -- This file has been generated from package.yaml by hpack version 0.35.2.
 --
@@ -6,13 +6,13 @@ cabal-version: 2.2
 
 name:           material-parser
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/material-parser#readme>
-homepage:       https://github.com/githubuser/material-parser#readme
-bug-reports:    https://github.com/githubuser/material-parser/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2023 Author name here
-license:        BSD-3-Clause
+description:    Please see the README on GitHub at <https://github.com/poselsky/material-parser#readme>
+homepage:       https://github.com/poselsky/material-parser#readme
+bug-reports:    https://github.com/poselsky/material-parser/issues
+author:         Oleg Musijenko
+maintainer:     Oleg Musijenko
+copyright:      2023 Oleg Musijenko
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -21,16 +21,14 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/material-parser
+  location: https://github.com/poselsky/material-parser
 
 library
   exposed-modules:
       Material
       Private.Material
   other-modules:
-      Paths_mtl_parser
-  autogen-modules:
-      Paths_mtl_parser
+      Paths_material_parser
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -45,9 +43,7 @@ test-suite material-parser-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_mtl_parser
-  autogen-modules:
-      Paths_mtl_parser
+      Paths_material_parser
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
