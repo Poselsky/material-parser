@@ -1,7 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Private.Material where
 
-
 import qualified Linear
 import qualified Data.Text as Text
 import qualified Data.Text.IO as Text.IO
@@ -185,7 +184,6 @@ parseMtl:: Maybe String -> Text.Text -> Either ParseError [Material]
 parseMtl (Just name) contents = parse topLevel name contents
 parseMtl Nothing     contents = parse topLevel "" contents
 
-
 --------------
 
 float:: MaterialParser Float
@@ -226,11 +224,8 @@ parseMapInput:: String -> MaterialParser (FilePath, TextureMapOptions)
 parseMapInput pattern = do
   void $ string pattern <* space
   optionTokens <- optionsFactor `endBy` space
-
   let finalOptions = foldr writeOptionTokenToOptions defaultTextureBumpMapOptions optionTokens
-
   fileName <- many (alphaNum <|> oneOf ".-_")
-
   return (fileName, finalOptions)
 
 parseIllumination:: MaterialParser IlluminationMode
@@ -281,7 +276,6 @@ parseTf = try rgb <|> try ciexyz <|> try spectral
       fileName <- many (alphaNum <|> oneOf ".-_")
       m_factor <- optionMaybe $ space *> float
       return $ Tf $ Just $ Spectral (fileName, fromMaybe 1 m_factor)
-
 
 parseMapKa:: MaterialParser Token
 parseMapKa = parseMapInput "map_Ka" <&> MapKa . Just
