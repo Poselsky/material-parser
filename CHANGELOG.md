@@ -1,4 +1,4 @@
-# Changelog for `material-parser`
+# Changelog for `wavefront-material`
 
 All notable changes to this project will be documented in this file.
 

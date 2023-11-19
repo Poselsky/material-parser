@@ -1,6 +1,6 @@
-name:                material-parser
+name:                wavefront-material
 version:             1.0.0
-github:              "poselsky/material-parser"
+github:              "poselsky/wavefront-material"
 license:             MIT
 author:              "Oleg Musijenko"
 copyright:           "2023 Oleg Musijenko"
@@ -16,7 +16,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/poselsky/material-parser#readme>
+description:         Please see the README on GitHub at <https://github.com/poselsky/wavefront-material#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -39,7 +39,7 @@ library:
   source-dirs: src
 
 tests:
-  material-parser-test:
+  wavefront-material-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -47,4 +47,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - material-parser
+    - wavefront-material

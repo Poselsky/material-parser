@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           material-parser
+name:           wavefront-material
 version:        1.0.0
-description:    Please see the README on GitHub at <https://github.com/poselsky/material-parser#readme>
-homepage:       https://github.com/poselsky/material-parser#readme
-bug-reports:    https://github.com/poselsky/material-parser/issues
+description:    Please see the README on GitHub at <https://github.com/poselsky/wavefront-material#readme>
+homepage:       https://github.com/poselsky/wavefront-material#readme
+bug-reports:    https://github.com/poselsky/wavefront-material/issues
 author:         Oleg Musijenko
 maintainer:     Oleg Musijenko
 copyright:      2023 Oleg Musijenko
@@ -21,7 +21,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/poselsky/material-parser
+  location: https://github.com/poselsky/wavefront-material
 
 library
   exposed-modules:
@@ -39,7 +39,7 @@ library
     , text
   default-language: Haskell2010
 
-test-suite material-parser-test
+test-suite wavefront-material-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
@@ -50,7 +50,7 @@ test-suite material-parser-test
   build-depends:
       base >=4.7 && <5
     , linear
-    , material-parser
+    , wavefront-material
     , parsec
     , text
   default-language: Haskell2010
