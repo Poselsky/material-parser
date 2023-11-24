@@ -197,7 +197,7 @@ float = do
 parseMaterialName:: MaterialParser Token
 parseMaterialName = do
   _ <- string "newmtl" <* space
-  many alphaNum <&> Newmtl
+  many (alphaNum <|> oneOf ".-_") <&> Newmtl
 
 parseVector3:: String -> MaterialParser (Linear.V3 Float)
 parseVector3 pattern = do
@@ -225,7 +225,7 @@ parseMapInput pattern = do
   void $ string pattern <* space
   optionTokens <- optionsFactor `endBy` space
   let finalOptions = foldr writeOptionTokenToOptions defaultTextureBumpMapOptions optionTokens
-  fileName <- many (alphaNum <|> oneOf ".-_")
+  fileName <- many (alphaNum <|> oneOf ".-_:/\\$&()*[]~")
   return (fileName, finalOptions)
 
 parseIllumination:: MaterialParser IlluminationMode
