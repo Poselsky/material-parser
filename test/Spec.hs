@@ -20,4 +20,7 @@ main = do
 
     val2 <- parseMtlFromFile "assets/Example1.mtl"
     print val2
+    
+    val3 <- parseMtlFromFile "assets/SomeCube.mtl"
+    print val3
 
